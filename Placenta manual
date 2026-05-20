@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Placenta Shield - AR Minimalista</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden; font-family: sans-serif;">
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    
+    <a-marker preset="hiro">
+      
+      <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 15000; easing: linear">
+        
+        <a-sphere radius="0.8" color="#f2f1ec" opacity="0.35" material="transparent: true; roughness: 0.2;"></a-sphere>
+        <a-sphere radius="0.79" color="#003366" opacity="0.2" material="transparent: true; wireframe: true;"></a-sphere>
+        
+        <a-entity animation="property: rotation; to: 360 360 0; loop: true; dur: 8000; easing: linear">
+          <a-icosahedron radius="0.25" color="#003366"></a-icosahedron>
+          <a-sphere radius="0.12" color="#dcfd8b" opacity="0.9"></a-sphere>
+        </a-entity>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="0 0.9 0"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="0 1.1 0"></a-sphere>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="0 -0.9 0"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="0 -1.1 0"></a-sphere>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="0.9 0 0" rotation="0 0 90"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="1.1 0 0"></a-sphere>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="-0.9 0 0" rotation="0 0 90"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="-1.1 0 0"></a-sphere>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="0.6 0.6 0" rotation="0 0 -45"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="0.75 0.75 0"></a-sphere>
+        
+        <a-cylinder radius="0.015" height="0.4" color="#003366" position="-0.6 0.6 0" rotation="0 0 45"></a-cylinder>
+        <a-sphere radius="0.08" color="#dcfd8b" position="-0.75 0.75 0"></a-sphere>
+        
+      </a-entity>
+      
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
